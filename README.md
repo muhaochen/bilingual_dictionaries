@@ -13,7 +13,7 @@ Environment:
 
 ./basic_MTL contains basic and MTL model variants.  
 ./joint contains the implementation of the joint training model.  
-These folders contain shell scripts to train/test on the reverse dictionary task.  
+These folders contain shell scripts to train/test.  
 
 ## Datasets
 
