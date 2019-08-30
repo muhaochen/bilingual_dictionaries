@@ -14,6 +14,8 @@ Environment:
 ./basic_MTL contains basic and MTL model variants.  
 ./joint contains the implementation of the joint training model.  
 These folders contain shell scripts to train/test.  
+./preprocess contains preprocessing scripts to extract lexical definitions from raw Wiktionary dump of three languages, including a shell script for the entire process.  
+
 
 ## Datasets and pre-trained embeddings
 
