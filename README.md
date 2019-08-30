@@ -19,7 +19,7 @@ These folders contain shell scripts to train/test.
 
 ## Datasets and pre-trained embeddings
 
-The link to the dataset can be found at (here)[https://drive.google.com/drive/u/1/folders/1Lm6Q5BxeU0ByR6DZcNfbWpntumiIKhYN].  
+The link to the dataset can be found at [here](https://drive.google.com/drive/u/1/folders/1Lm6Q5BxeU0ByR6DZcNfbWpntumiIKhYN).  
 ### About the Wikt3l data files:  
 In each csv file there are three columns. The first column is the translations of the target word in the source language, which are used just for reference to mask out surface information in the definitions and the monolingual baselines. Please consider the second column as label. The third column records the definitions.   
 
