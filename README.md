@@ -9,12 +9,17 @@ Environment:
     CuDNN
     Keras 2.2.4
 
+## Folders
+
+./basic_MTL contains basic and MTL model variants.  
+./joint contains the implementation of the joint training model.  
+These folders contain shell scripts to train/test on the reverse dictionary task.  
+
 ## Datasets
 
 The link to the dataset can be found at (here)[https://drive.google.com/drive/u/1/folders/1Lm6Q5BxeU0ByR6DZcNfbWpntumiIKhYN].  
 
 ## Reference
-This work has been accepted at CoNLL2019.
 
 Bibtex:
 
