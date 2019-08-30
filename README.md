@@ -28,6 +28,5 @@ Bibtex:
         author={Chen, Muhao and Tian, Yingtao and Chen, Haochen and Chang, Kai-Wei and Skiena, Steven and Zaniolo, Carlo},
         booktitle={The 23rd SIGNLL Conference on Computational Natural Language Learning (CoNLL)},
         year = {2019},
-        month = {07},
         publisher={ACL}
     }
