@@ -1,0 +1,71 @@
+python process_train_corpora.py enwiki-latest-pages-articles.xml.bz2 enwiki-latest-pages-articles.txt
+python word_freq.py enwiki-latest-pages-articles.txt ../word_dict/en_freq.tsv
+python process_train_corpora.py frwiki-latest-pages-articles.xml.bz2 frwiki-latest-pages-articles.txt
+python word_freq.py frwiki-latest-pages-articles.txt ../word_dict/fr_freq.tsv
+
+
+python process_train_corpora.py enwiki-latest-pages-articles.xml.bz2 enwiki-latest-pages-articles.txt
+python word_freq.py enwiki-latest-pages-articles.txt ../word_dict/en_freq.tsv
+cd ../word_dict/merged_processed
+python sort_freq.py ../en_freq.tsv en_fr_merged.csv ../sorted/en_fr_sorted.csv ../sorted/en_fr_train500.csv ../sorted/en_fr_test500.csv
+python sort_freq.py ../fr_freq.tsv fr_en_merged.csv ../sorted/fr_en_sorted.csv ../sorted/fr_en_train500.csv ../sorted/fr_en_test500.csv
+python sort_freq.py ../en_freq.tsv en_merged.csv ../sorted/en_sorted.csv ../sorted/en_train500.csv ../sorted/en_test500.csv
+python sort_freq.py ../fr_freq.tsv fr_merged.csv ../sorted/fr_sorted.csv ../sorted/fr_train500.csv ../sorted/fr_test500.csv
+
+-- es word freq
+wget https://dumps.wikimedia.org/eswiki/latest/eswiki-latest-pages-articles.xml.bz2
+python process_train_corpora.py eswiki-latest-pages-articles.xml.bz2 eswiki-latest-pages-articles.txt
+python word_freq.py eswiki-latest-pages-articles.txt ../word_dict/es_freq.tsv
+
+
+-- dbp
+python fetch_ill_es.py
+python fetch_raw_es.py
+python fetch_dict_es.py
+
+-- wikt es
+python parse_es_manual.py
+python parse_en_manual\(es\).py
+python parse_en_trans\(es\).py
+
+
+python merge_monolingual.py ../es_merged/es_merged.csv ../es_wiktionary/es_dict.csv ../es_wiktionary/es_dict3.csv
+python merge_monolingual.py ../es_merged/en_merged_es.csv ../es_wiktionary/en_dict.csv ../es_wiktionary/en_dict3.csv
+python merge_multilingual.py ../es_merged/en_es_merged.csv ../es_wiktionary/en_es_dict.csv ../es_wiktionary/en_es_dict3.csv
+python merge_multilingual.py ../es_merged/es_en_merged.csv ../es_wiktionary/es_en_dict.csv ../es_wiktionary/es_en_dict2.csv ../es_wiktionary/es_en_dict3.csv
+
+-- sort es
+cd ../word_dict/es_merged_processed
+python sort_freq.py ../en_freq.tsv en_es_merged.csv ../es_sorted/en_es_sorted.csv ../es_sorted/en_es_train500.csv ../es_sorted/en_es_test500.csv
+python sort_freq.py ../es_freq.tsv es_en_merged.csv ../es_sorted/es_en_sorted.csv ../es_sorted/es_en_train500.csv ../es_sorted/es_en_test500.csv
+python sort_freq.py ../en_freq.tsv en_merged_es.csv ../es_sorted/en_sorted_es.csv ../es_sorted/en_train500_es.csv ../es_sorted/en_test500_es.csv
+python sort_freq.py ../es_freq.tsv es_merged.csv ../es_sorted/es_sorted.csv ../es_sorted/es_train500.csv ../es_sorted/es_test500.csv
+
+
+-- merge wiktionary fr
+
+python merge_monolingual.py ../merge_wiktionary/fr_merged.csv ../wiktionary/fr_dict.csv
+python merge_monolingual.py ../merge_wiktionary/en_merged.csv ../wiktionary/en_dict.csv
+python merge_multilingual.py ../merge_wiktionary/en_fr_merged.csv ../wiktionary/en_fr_dict.csv ../wiktionary/en_fr_dict2.csv
+python merge_multilingual.py ../merge_wiktionary/fr_en_merged.csv ../wiktionary/fr_en_dict.csv ../wiktionary/fr_en_dict2.csv
+
+-- merge wiktionary es
+
+python merge_monolingual.py ../es_merge_wiktionary/es_merged.csv ../es_wiktionary/es_dict.csv
+python merge_monolingual.py ../es_merge_wiktionary/en_merged_es.csv ../es_wiktionary/en_dict.csv
+python merge_multilingual.py ../es_merge_wiktionary/en_es_merged.csv ../es_wiktionary/en_es_dict.csv
+python merge_multilingual.py ../es_merge_wiktionary/es_en_merged.csv ../es_wiktionary/es_en_dict.csv ../es_wiktionary/es_en_dict2.csv
+
+
+cd ../merged_wiktionary_processed
+python sort_freq.py ../en_freq.tsv en_fr_merged.csv ../wiktionary_sorted/en_fr_sorted.csv ../wiktionary_sorted/en_fr_train500.csv ../wiktionary_sorted/en_fr_test500.csv
+python sort_freq.py ../fr_freq.tsv fr_en_merged.csv ../wiktionary_sorted/fr_en_sorted.csv ../wiktionary_sorted/fr_en_train500.csv ../wiktionary_sorted/fr_en_test500.csv
+python sort_freq.py ../en_freq.tsv en_merged.csv ../wiktionary_sorted/en_sorted.csv ../wiktionary_sorted/en_train500.csv ../wiktionary_sorted/en_test500.csv
+python sort_freq.py ../fr_freq.tsv fr_merged.csv ../wiktionary_sorted/fr_sorted.csv ../wiktionary_sorted/fr_train500.csv ../wiktionary_sorted/fr_test500.csv
+
+
+cd ../es_merged_wiktionary_processed
+python sort_freq.py ../en_freq.tsv en_es_merged.csv ../es_wiktionary_sorted/en_es_sorted.csv ../es_wiktionary_sorted/en_es_train500.csv ../es_wiktionary_sorted/en_es_test500.csv
+python sort_freq.py ../es_freq.tsv es_en_merged.csv ../es_wiktionary_sorted/es_en_sorted.csv ../es_wiktionary_sorted/es_en_train500.csv ../es_wiktionary_sorted/es_en_test500.csv
+python sort_freq.py ../en_freq.tsv en_merged_es.csv ../es_wiktionary_sorted/en_sorted_es.csv ../es_wiktionary_sorted/en_train500_es.csv ../es_wiktionary_sorted/en_test500_es.csv
+python sort_freq.py ../es_freq.tsv es_merged.csv ../es_wiktionary_sorted/es_sorted.csv ../es_wiktionary_sorted/es_train500.csv ../es_wiktionary_sorted/es_test500.csv
