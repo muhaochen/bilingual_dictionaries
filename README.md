@@ -1,4 +1,4 @@
-# Learning to Represent Bilingual Dictionaries
+# Learning to Represent Bilingual Dictionaries (Lexical Definitions)
 
 This is the repository for BilDRL: Learning to Represent Bilingual Dictionaries. This repository contains the source code and links to some datasets used in our paper. Particularly for the datasets, in addition to *bilingual lexical definitions* extracted from Wiktionary between English-French and English-Spanish, we also provide a cleaned set of *monolingual lexical definitions* in English, French and Spanish, also extracted from Wiktionary.
 
