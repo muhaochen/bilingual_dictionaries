@@ -7,9 +7,9 @@ We propose a neural embedding model that leverages bilingual dictionaries. The p
 Environment:
 
     python 2.7 or 3.6
-    Tensorflow 1.7 (with GPU support)
+    Tensorflow >= 1.7 (with GPU support)
+    Keras >= 2.2.4
     CuDNN
-    Keras 2.2.4
 
 ### Folders
 
