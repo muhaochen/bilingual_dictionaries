@@ -25,10 +25,12 @@ The link to the dataset can be found at [here](https://drive.google.com/drive/u/
 #### About the Wikt3l data files:  
 In each csv file there are three columns. The first column is the translations of the target word in the source language, which are used just for reference to mask out surface information in the definitions and the monolingual baselines. Please consider the second column as label. The third column records the definitions.   
 #### Monolingual lexical definitions:
-We also include larger sets of monolingual lexical definitions for the above three languages. Together with the bilingual lexical defitions, they are used in paper [Learning Bilingual Word Embeddings Using Lexical Definitions](https://www.aclweb.org/anthology/W19-4316/).
+We also include larger sets of monolingual lexical definitions for the above three languages. 
 
 ## Learning Bilingual Word Embeddings Using Lexical Definitions
-we propose BilLex that leverages publicly available lexical definitions for bilingual word embedding learning. Without the need of predefined seed lexicons, BilLex comprises a novel word pairing strategy to automatically identify and propagate the precise finegrained word alignment from lexical definitions. We evaluate BilLex in word-level and sentence-level translation tasks, which seek to find the cross-lingual counterparts of words and sentences respectively. More details of this side project can be found at [here](https://github.com/swj0419/bilingual_dict_embeddings).
+Both the released monolingual and bilingual lexical defitions are used in our side project [Learning Bilingual Word Embeddings Using Lexical Definitions](https://www.aclweb.org/anthology/W19-4316/) described below.
+
+In this side project, we use lexical definitions for bilingual word embedding learning. The BilLex model comprises a word pairing strategy to automatically identify and propagate the precise fine-grained word alignment from lexical definitions. We evaluate BilLex in word-level and sentence-level translation tasks. More details of this side project can be found at [here](https://github.com/swj0419/bilingual_dict_embeddings).
 
 ## Reference
 If you find our resources useful to you, please kindly cite our paper.  
@@ -42,7 +44,7 @@ Bibtex:
         publisher={ACL}
     }
 
--
+The BilLex word embeddings:
 
     @inproceedings{shi2019bilex,
         title={Learning Bilingual Word Embeddings Using Lexical Definitions},
