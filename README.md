@@ -30,7 +30,7 @@ In each csv file there are three columns. The first column is the translations o
 We also include larger sets of monolingual lexical definitions for the above three languages. Together with the bilingual lexical defitions, they are used in paper [Learning Bilingual Word Embeddings Using Lexical Definitions](https://www.aclweb.org/anthology/W19-4316/).
 
 ## Learning Bilingual Word Embeddings Using Lexical Definitions
-we propose BilLex that leverages publicly available lexical definitions for bilingual word embedding learning. Without the need of predefined seed lexicons, BilLex comprises a novel word pairing strategy to automatically identify and propagate the precise finegrained word alignment from lexical definitions. We evaluate BilLex in word-level and sentence-level translation tasks, which seek to find the cross-lingual counterparts of words and sentences respectively. BilLex significantly outperforms previous embedding methods on both tasks.
+we propose BilLex that leverages publicly available lexical definitions for bilingual word embedding learning. Without the need of predefined seed lexicons, BilLex comprises a novel word pairing strategy to automatically identify and propagate the precise finegrained word alignment from lexical definitions. We evaluate BilLex in word-level and sentence-level translation tasks, which seek to find the cross-lingual counterparts of words and sentences respectively. (To be updated)
 
 ## Reference
 If you find our resources useful to you, please kindly cite our paper.  
