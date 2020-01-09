@@ -74,7 +74,7 @@ batchsize1 = 50
 
 import keras
 from keras.models import Sequential, Model
-from keras.layers import Dense, Activation, Dropout, Embedding, LSTM, CuDNNGRU, Bidirectional, Merge, BatchNormalization, merge, Conv1D, Dot, Multiply, Lambda
+from keras.layers import Dense, Activation, Dropout, Embedding, LSTM, CuDNNGRU, Bidirectional, BatchNormalization, Conv1D, Dot, Multiply, Lambda
 from keras.layers.core import Flatten, Reshape
 from keras.layers.pooling import MaxPooling1D, GlobalAveragePooling1D
 from keras.optimizers import Adam
