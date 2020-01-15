@@ -22,7 +22,7 @@ These folders contain *shell scripts* to train/test. Please adjust paths to dire
 
 ### Datasets and pre-trained embeddings
 
-The link to the dataset can be found at [here](https://drive.google.com/drive/u/1/folders/1Lm6Q5BxeU0ByR6DZcNfbWpntumiIKhYN). 
+The link to the dataset can be found at [here](https://drive.google.com/drive/folders/1Lm6Q5BxeU0ByR6DZcNfbWpntumiIKhYN?usp=sharing). 
 Note that **all gzipped files need to be decompressed** after downloading, which, for example can be done by running `gzip -d *.gz` on a Linux box.
 
 #### About the Wikt3l data files:  
