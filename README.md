@@ -41,6 +41,9 @@ Both the released monolingual and bilingual lexical defitions are used in our si
 
 In this side project, we use lexical definitions for bilingual word embedding learning. The BilLex model comprises a word pairing strategy to automatically identify and propagate the precise fine-grained word alignment from lexical definitions. We evaluate BilLex in word-level and sentence-level translation tasks. More details of this side project can be found at [here](https://github.com/swj0419/bilingual_dict_embeddings).
 
+### Readlist
+Here is a [readlist](https://github.com/hardyqr/reverse_dictionaries) of papers on reverse dictionaries by [@hardyqr](https://github.com/hardyqr).
+
 ## Reference
 If you find our resources useful to you, please kindly cite our paper.  
 Bibtex:
